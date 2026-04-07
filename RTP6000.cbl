@@ -1,10 +1,10 @@
        IDENTIFICATION DIVISION.
 
-       PROGRAM-ID. RPT5000.
+       PROGRAM-ID. RPT6000.
       ****************************************************************
-      * PROGRAM NAME: RPT5000
-      * AUTHORS: Kayley Wells & Grant Peverett
-      * DATE: 03/24/2026
+      * PROGRAM NAME: RPT6000
+      * AUTHORS: Grant Peverett
+      * DATE: 04/10/2026
       * DESCRIPTION: Year-To-Date Sales Report with Change Columns
       ****************************************************************
 
@@ -15,7 +15,7 @@
 
        FILE-CONTROL.
            SELECT INPUT-CUSTMAST ASSIGN TO CUSTMAST.
-           SELECT OUTPUT-RPT5000 ASSIGN TO RPT5000.
+           SELECT OUTPUT-RPT6000 ASSIGN TO RPT6000.
 
        DATA DIVISION.
        FILE SECTION.
@@ -34,7 +34,7 @@
            05  CM-SALES-LAST-YTD       PIC S9(5)V9(2).
            05  FILLER                  PIC X(87).
 
-       FD  OUTPUT-RPT5000
+       FD  OUTPUT-RPT6000
            RECORDING MODE IS F
            LABEL RECORDS ARE STANDARD
            RECORD CONTAINS 130 CHARACTERS
@@ -50,7 +50,8 @@
               88 NOT-FIRST-RECORD               VALUE "N".
 
        01  PRICE-TABLE          VALUE "10112.50 351.35"
-           05 PRICE-GROUP              OCCURS 4 TIMES.
+           05 PRICE-GROUP              OCCURS 16 TIMES 
+                                       INDEXED BY PRICE-TABLE-INDEX
               10   ITEM-NUMBER         PIC 9(3)    VALUE ZERO.
               10   ITEM-PRICE          PIC S99V99  VALUE ZERO.
 
@@ -61,7 +62,7 @@
            05  FILLER                  PIC 9(3)    VALUE "351".
            05  FILLER                  PIC S99V99  VALUE +.35.
        
-       01  PRICE-TABLE REFEFINES PRICE-TABLE-VALUES
+       01  PRICE-TABLE REDEFINES PRICE-TABLE-VALUES
            05 PRICE-GROUP              OCCURS 16 TIMES.
                10  ITEM-NUMBER         PIC 9(3).
                10  ITEM-PRICE          PIC S99V99.
@@ -118,7 +119,7 @@
            05  FILLER          PIC X(1)    VALUE ":".
            05  HL2-MINUTES     PIC 9(2).
            05  FILLER          PIC X(72)   VALUE SPACE.
-           05  FILLER          PIC X(7)   VALUE "RPT5000".
+           05  FILLER          PIC X(7)   VALUE "RPT6000".
 
        01  HEADING-LINE-3.
            05  FILLER PIC X(8)  VALUE "BRANCH  ".
