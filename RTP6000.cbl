@@ -252,6 +252,25 @@
            MOVE CD-HOURS   TO HL2-HOURS.
            MOVE CD-MINUTES TO HL2-MINUTES.
 
+       200-LOAD-SALESREP-TABLE.
+           PERFORM 
+              WITH TEST AFTER 
+              VARYING SRT-INDEX FROM 1 BY 1
+              UNTIL SALESREP-EOF OR SRT-INDEX = 100
+                PERFORM 210-READ-SALESREP-TABLE-RECORD
+                IF NOT SALESREP-EOF
+                   MOVE SM-SALESREP-NUMBER 
+                      TO SALESREP-NUMBER(SRT-INDEX)
+                   MOVE SM-SALESREP-NAME
+                      TO SALESREP-NAME(SRT-INDEX)
+                END-IF 
+           END-PERFORM.
+
+       210-READ-SALESREP-TABLE-RECORD.
+           READ INPUT-SALESREP RECORD INTO SALESREP-MASTER-RECORD
+             AT END
+                SET SALESREP-EOF TO TRUE.      
+
        300-PREPARE-SALES-LINES.
            PERFORM 310-READ-CUSTOMER-RECORD.
            EVALUATE TRUE
