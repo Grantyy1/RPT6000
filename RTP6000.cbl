@@ -49,10 +49,22 @@
            05  FIRST-RECORD-SWITCH     PIC X    VALUE "Y".
               88 NOT-FIRST-RECORD               VALUE "N".
 
-       01  PRICE-TABLE.
-           05 PRICE-GROUP              OCCURS 16 TIMES.
+       01  PRICE-TABLE          VALUE "10112.50 351.35"
+           05 PRICE-GROUP              OCCURS 4 TIMES.
               10   ITEM-NUMBER         PIC 9(3)    VALUE ZERO.
               10   ITEM-PRICE          PIC S99V99  VALUE ZERO.
+
+       01  PRICE-TABLE-VALUES.
+           05  FILLER                  PIC 9(3)    VALUE "101".
+           05  FILLER                  PIC S99V99  VALUE +12.50.
+
+           05  FILLER                  PIC 9(3)    VALUE "351".
+           05  FILLER                  PIC S99V99  VALUE +.35.
+       
+       01  PRICE-TABLE REFEFINES PRICE-TABLE-VALUES
+           05 PRICE-GROUP              OCCURS 16 TIMES.
+               10  ITEM-NUMBER         PIC 9(3).
+               10  ITEM-PRICE          PIC S99V99.
               
        01  CONTROL-FIELDS.
            05  OLD-SALESREP-NUMBER     PIC 99.
