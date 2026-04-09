@@ -43,6 +43,11 @@
        01  PRINT-AREA      PIC X(130).
 
        WORKING-STORAGE SECTION.
+       01  SALES-MASTER-RECORD.
+           10 MST-SALESREP-NUMBER      PIC 99.
+           10 MST-SALESREP-NAME        PIC X(10).
+           05 FILLER                   PIC X(118).
+
        01  SWITCHES.
            05  CUSTMAST-EOF-SWITCH     PIC X    VALUE "N".
               88 CUSTMAST-EOF                   VALUE "Y".
@@ -429,3 +434,4 @@
            PERFORM 350-WRITE-REPORT-LINE.
            MOVE GRAND-TOTAL-LINE-2 TO PRINT-AREA.
            PERFORM 350-WRITE-REPORT-LINE.
+
