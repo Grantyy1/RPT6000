@@ -49,41 +49,41 @@ The program uses an EVALUATE TRUE structure in 300-PREPARE-SALES-LINES to drive 
 
 ## Output of the code running
 ```
-DATE:  04/07/2026                          YEAR-TO-DATE SALES REPORT                          PAGE:    1
-TIME:  21:24                                                                                  RPT6000
+DATE:  04/14/2026                          YEAR-TO-DATE SALES REPORT                          PAGE:    1
+TIME:  09:19                                                                                  RPT6000
 
                                                       SALES        SALES         CHANGE     CHANGE
 BRANCH   SALESREP             CUSTOMER              THIS YTD      LAST YTD       AMOUNT     PERCENT
 ------ ------------- --------------------------   -----------   -----------    -----------  -------
 
-  12   12 AJONES     11111 INFORMATION BUILDERS       1,234.56      1,111.11        123.45    +11.1
-                     12345 CAREER TRAINING CTR       12,345.67     22,222.22      9,876.55-   -44.4
-                                    SALESREP TOTAL  $13,580.23    $23,333.33     $9,753.10-   -41.8*
-                                      BRANCH TOTAL  $13,580.23    $23,333.33     $9,753.10-   -41.8**
+  12   12 AJONES     11111 INFORMATION BUILDERS      12,345.60     11,111.00     98,765.40-   -88.9
+                     12345 CAREER TRAINING CTR       23,456.72     22,222.00     98,765.28-   -44.4
+                                    SALESREP TOTAL  $35,802.32    $33,333.00    $97,530.68-   -59.3*
+                                      BRANCH TOTAL  $35,802.32    $33,333.00    $97,530.68-   -59.3**
 
-  22   10 UNKNOWN    22222 HOMELITE TEXTRON CO       34,545.00          0.00     34,545.00     N/A
-                                    SALESREP TOTAL  $34,545.00         $0.00    $34,545.00     N/A *
-       14 KBAKER     34567 NEAS MEMBER BENEFITS         111.11          0.00        111.11     N/A
-                     55555 PILOT LIFE INS. CO.       10,000.00      1,000.00      9,000.00   +900.0
-                                    SALESREP TOTAL  $10,111.11     $1,000.00     $9,111.11   +911.1*
-                                      BRANCH TOTAL  $44,656.11     $1,000.00    $43,656.11   OVRFLW**
+  22   10 UNKNOWN    22222 HOMELITE TEXTRON CO       45,450.00          0.00     45,450.00     N/A
+                                    SALESREP TOTAL  $45,450.00         $0.00    $45,450.00     N/A *
+       14 BAKER      34567 NEAS MEMBER BENEFITS       1,111.10          0.00      1,111.10     N/A
+                     55555 PILOT LIFE INS. CO.            0.00          0.00          0.00     +0.0
+                                    SALESREP TOTAL   $1,111.10         $0.00     $1,111.10     +1.1*
+                                      BRANCH TOTAL  $46,561.10         $0.00    $46,561.10   +346.6**
 
-  34   10 UNKNOWN    00111 DAUPHIN DEPOSIT BANK      14,099.00     19,930.00      5,831.00-   -29.3
-                     54321 AIRCRAFT OWNERS ASSC       5,426.12     40,420.00     34,993.88-   -86.6
-                                    SALESREP TOTAL  $19,525.12    $60,350.00    $40,824.88-   -67.6*
-       17 STRACKER   33333 NORFOLK CORP               6,396.35      4,462.88      1,933.47    +43.3
-                                    SALESREP TOTAL   $6,396.35     $4,462.88     $1,933.47    +43.3*
-                                      BRANCH TOTAL  $25,921.47    $64,812.88    $38,891.41-   -60.0**
+  34   10 UNKNOWN    00111 DAUPHIN DEPOSIT BANK      40,990.01     93,000.00     52,009.99-   -85.8
+                     54321 AIRCRAFT OWNERS ASSC      54,261.24     42,000.00     12,261.24    +29.2
+                                    SALESREP TOTAL  $95,251.25    $35,000.00    $60,251.25   +457.9*
+       17 STRACKER   33333 NORFOLK CORP              63,963.50     46,288.00     82,324.50-   -85.7
+                                    SALESREP TOTAL  $63,963.50    $46,288.00    $82,324.50-   -85.7*
+                                      BRANCH TOTAL  $59,214.75    $81,288.00    $22,073.25-   -46.1**
 
-  47   11 TSMITH     12121 GENERAL SERVICES CO.      11,444.00     11,059.56        384.44     +3.5
-                     24680 INFO MANAGEMENT CO.       17,481.45     11,892.47      5,588.98    +47.0
-                                    SALESREP TOTAL  $28,925.45    $22,952.03     $5,973.42    +26.0*
-       21 FFRANKLIN  99999 DOLLAR SAVINGS BANK        5,059.00      4,621.95        437.05     +9.5
-                     76543 NATL MUSIC CORP.           2,383.46      4,435.26      2,051.80-   -46.3
-                                    SALESREP TOTAL   $7,442.46     $9,057.21     $1,614.75-   -17.8*
-                                      BRANCH TOTAL  $36,367.91    $32,009.24     $4,358.67    +13.6**
+  47   11 TSMITH     12121 GENERAL SERVICES CO.      14,440.01      5,956.00      8,484.01     +8.0
+                     24680 INFO MANAGEMENT CO.       74,814.51     89,247.00     14,432.49-    -7.6
+                                    SALESREP TOTAL  $89,254.52    $95,203.00     $5,948.48-    -2.0*
+       21 FRANKLIN   99999 DOLLAR SAVINGS BANK       50,590.00     62,195.00     11,605.00-   -89.1
+                     76543 NATL MUSIC CORP.          23,834.60     43,526.00     19,691.40-   -94.6
+                                    SALESREP TOTAL  $74,424.60     $5,721.00    $31,296.40-   -91.8*
+                                      BRANCH TOTAL  $63,679.12       $924.00    $62,755.12    +81.0**
 
-                                       GRAND TOTAL $120,525.72   $121,155.45       $629.73-    -0.5***
+                                       GRAND TOTAL $205,257.29   $115,545.00    $89,712.29     +8.0***
 ```
 
 ---
